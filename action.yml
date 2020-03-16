@@ -1,6 +1,9 @@
 name: 'Hello World'
 description: 'Greet someone and record the time'
 author: 'Alpha Olomi'
+branding:
+  icon: 'code'
+  color: 'blue'
 inputs:
   who-to-greet:  # id of input
     description: 'Who to greet'
