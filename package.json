@@ -1,15 +1,26 @@
 {
   "name": "hello-world-javascript-action",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "compile" : "ncc build index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "version": "0.0.1",
+  "private": false,
+  
+  "description": "Posts a nice qoute for pushing code.",
+  "main": "dist/main.js", 
+  "scripts": {  
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "format": "prettier --write **/*.ts",
+    "format-check": "prettier --check **/*.ts",
+    "lint": "eslint src/**/*.ts",
+    "pack": "ncc build",
+    "all": "yarn run build && yarn run format && yarn run lint && yarn run pack"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "actions",
+    "cats",
+    "github"
+  ],
+  "author": "Alpha Olomi",
+  "license": "MIT",
   "dependencies": {
     "@actions/core": "^1.2.3",
     "@actions/github": "^2.1.1"
